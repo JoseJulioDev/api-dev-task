@@ -1,9 +1,24 @@
-import {Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn} from 'typeorm';
+import {Entity, PrimaryGeneratedColumn, CreateDateColumn,
+        UpdateDateColumn, Column} from 'typeorm';
 
-@Entity('task')
+enum Status {
+    OPENED = 1,
+    IN_PROGRESS = 2,
+    FINISHED = 3,
+    CANCELED = 4,
+}
+
+@Entity('tasks')
 class Task {
     @PrimaryGeneratedColumn('uuid')
     id: string;
+
+    title: string;
+
+    description: string;
+
+    @Column('int')
+    status: Status;
 
     @CreateDateColumn()
     create_at: Date;
