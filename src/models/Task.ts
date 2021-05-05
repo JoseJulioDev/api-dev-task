@@ -1,12 +1,7 @@
 import {Entity, PrimaryGeneratedColumn, CreateDateColumn,
         UpdateDateColumn, Column} from 'typeorm';
 
-enum Status {
-    OPENED = 1,
-    IN_PROGRESS = 2,
-    FINISHED = 3,
-    CANCELED = 4,
-}
+import Status from './Status';
 
 @Entity('tasks')
 class Task {

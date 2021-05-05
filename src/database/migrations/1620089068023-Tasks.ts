@@ -20,7 +20,7 @@ export class Tasks1620089068023 implements MigrationInterface {
                     },
                     {
                         name: 'description',
-                        type: 'double precision',
+                        type: 'varchar',
                     },
                     {
                         name: 'status',

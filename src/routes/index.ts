@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 import homeRouter from './home.routes';
-import tasksRouter from './task.routes';
+import tasksRouter from './tasks.routes';
 
 const routes = Router();
 
