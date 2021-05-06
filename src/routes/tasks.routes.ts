@@ -20,7 +20,7 @@ tasksRouter.post('/', async (request, response) => {
 
     const task = await createTask.execute({title, description});
 
-    return response.json({task});
+    return response.json(task);
 });
 
 export default tasksRouter;
